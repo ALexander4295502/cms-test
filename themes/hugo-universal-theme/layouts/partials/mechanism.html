@@ -1,0 +1,50 @@
+{{ if isset .Site.Params "mechanism" }}
+{{ if .Site.Params.mechanism.enable }}
+<section class="bar background-pentagon no-mb">
+    <div class="container">
+
+        <div class="col-md-12">
+            <div class="heading text-center">
+                <h2>{{ .Site.Params.mechanism.title }}</h2>
+            </div>
+
+            <p class="lead">
+                {{ .Site.Params.mechanism.subtitle | markdownify }}
+            </p>
+
+            <!-- *** BLOG HOMEPAGE *** -->
+
+            <div class="row">
+
+                {{ range index $.Site.Data.mechanism $.Lang }}
+                <div class="row mechanism">
+                    <div class="col-md-7">
+                        <div style="overflow:hidden">
+                            <img src="{{ .image | absURL }}" class="img-responsive" alt="" >
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" id="text-box">
+                        <h4>{{ .title }}</h4>
+                        <p class="intro">{{ .description }}</p>
+                        <p class="read-more">
+                            <a href="#" class="btn btn-template-main">{{ i18n "continueReading" }}</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- /.box-image-text -->
+
+                {{ end }}
+
+            </div>
+            <!-- /.row -->
+
+            <!-- *** BLOG HOMEPAGE END *** -->
+
+        </div>
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /.bar -->
+{{ end }}
+{{ end }}

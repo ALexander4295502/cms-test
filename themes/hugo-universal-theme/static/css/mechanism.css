@@ -1,0 +1,13 @@
+.row.mechanism{
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+#text-box {
+    top: 3em;
+}
+
+#text-box > h4,
+#text-box > p.read-more {
+    text-align: center;
+}
