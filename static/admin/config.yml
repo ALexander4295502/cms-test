@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ALexander4295502/sportik-website # Path to your Github repository
+  repo: ALexander4295502/cms-test # Path to your Github repository
   branch: master # Branch to update (master by default)
 
 public_folder: "content"
